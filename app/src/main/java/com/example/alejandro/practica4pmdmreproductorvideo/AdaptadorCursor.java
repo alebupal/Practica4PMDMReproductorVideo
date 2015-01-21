@@ -47,6 +47,7 @@ public class AdaptadorCursor extends CursorAdapter{
         tvPeso =(TextView)view.findViewById(R.id.tvPeso);
 
         String ruta=cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATA));
+        //Bitmap bmThumbnail=ThumbnailUtils.createVideoThumbnail(cursor.getString(cursor.getColumnIndex("_Data")),cursor.getInt(cursor.getColumnIndex("_Id")));
         Bitmap bmThumbnail= ThumbnailUtils.createVideoThumbnail(ruta, MediaStore.Video.Thumbnails.MICRO_KIND);
 
         Picasso.with(context).load(getImageUri(context,bmThumbnail)).into(iv);
