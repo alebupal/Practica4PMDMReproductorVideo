@@ -1,23 +1,18 @@
-package com.example.alejandro.practica4pmdpreproductorvideo;
+package com.example.alejandro.practica4pmdmreproductorvideo;
 
 import android.app.Activity;
 import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.support.v4.view.MotionEventCompat;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.TextureView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -192,8 +187,6 @@ public class Reproductor extends Activity {
         }
         String tiempo = hora+":"+minutos+":"+segundos;
         return tiempo;
-
-
     }
 
 

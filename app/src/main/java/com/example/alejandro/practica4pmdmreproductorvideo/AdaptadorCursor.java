@@ -1,4 +1,4 @@
-package com.example.alejandro.practica4pmdpreproductorvideo;
+package com.example.alejandro.practica4pmdmreproductorvideo;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,11 +6,9 @@ import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,8 +16,6 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.util.ArrayList;
 
 
 public class AdaptadorCursor extends CursorAdapter{

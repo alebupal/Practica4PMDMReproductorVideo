@@ -1,4 +1,4 @@
-package com.example.alejandro.practica4pmdpreproductorvideo;
+package com.example.alejandro.practica4pmdmreproductorvideo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
