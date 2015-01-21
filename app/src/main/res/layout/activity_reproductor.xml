@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+            android:visibility="visible">
+            </VideoView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/botones"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center_horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ibAnterior"
+                    android:background="@drawable/anterior"
+                    android:layout_marginRight="10dp"
+                    android:onClick="anterior"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ibPause"
+                        android:background="@drawable/pause"
+                        android:visibility="visible"
+                        android:onClick="pause" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ibPlay"
+                        android:background="@drawable/play"
+                        android:visibility="invisible"
+                        android:onClick="play" />
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ibSiguiente"
+                    android:background="@drawable/sigui"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="siguiente" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTiempoActual"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="8dp" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBar"
+                    android:layout_weight="8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvTiempoTotal"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
