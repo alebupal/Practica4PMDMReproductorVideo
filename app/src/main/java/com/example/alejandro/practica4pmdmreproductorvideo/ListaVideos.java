@@ -46,12 +46,8 @@ public class ListaVideos extends ActionBarActivity {
         final ListView ls = (ListView) findViewById(R.id.listView);
 
 
-
-
-
-
         /*Con array*/
-        cur.moveToFirst();
+        /*cur.moveToFirst();
         //for(int i=0;i<cur.getCount();i++){
         for(int i=0;i<15;i++){
             Video v = new Video();
@@ -65,30 +61,25 @@ public class ListaVideos extends ActionBarActivity {
         cur.close();
         ad2 = new AdaptadorArrayList(this, R.layout.lista_detalle, datos);
         ls.setAdapter(ad2);
-        registerForContextMenu(ls);
-
-
-
-
-
-
-
+        registerForContextMenu(ls);*/
 
 
         /* Con cursor*/
-        /*ad = new AdaptadorCursor(this, cur);
+        ad = new AdaptadorCursor(this, cur);
 
         ls.setAdapter(ad);
-        registerForContextMenu(ls);*/
+        registerForContextMenu(ls);
 
         ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent it = new Intent(getApplicationContext(), Reproductor.class);
                 Bundle b = new Bundle();
-                /*Cursor c=(Cursor)ls.getItemAtPosition(i);
-                b.putString("ruta", c.getString(c.getColumnIndex(MediaStore.Video.Media.DATA)));*/
-                b.putString("ruta", datos.get(i).getRuta().toString());
+                /*Cursor*/
+                Cursor c=(Cursor)ls.getItemAtPosition(i);
+                b.putString("ruta", c.getString(c.getColumnIndex(MediaStore.Video.Media.DATA)));
+                /*Array*/
+                /*b.putString("ruta", datos.get(i).getRuta().toString());*/
                 it.putExtras(b);
                 startActivityForResult(it, REPRODUCIR);
             }
